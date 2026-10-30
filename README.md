@@ -17,6 +17,14 @@
   零封号风险 · 纯本地运行 (127.0.0.1) · 免安装 (~13MB) · 自带 Key / 本地私有模型支持 · 告别职场沟通内耗
 </p>
 
+> ### 📦 v3.0.0-beta 实际交付的能力
+>
+> 本次发布包内置的是 **聊天要点总结 + 待办清单** 引擎：读取你指定会话的最近消息，按场景模板
+> （班级家校群 / 职场周报 / 人情账 / 装修租房 / 聚餐自驾 / 长辈就医 / 升学季）输出【核心事实摘要 + 待办清单】。
+>
+> **「回复起草 / 高情商润色」是下一版（v3.1）正在开发的能力，本发布包尚未包含。**
+> 本页其余章节对该能力的描述属于路线图，请以本节为准。
+
 ---
 
 [English Readme](#english-documentation) | [中文说明文档](#中文说明文档) | [快速上手](#快速上手) | [首启配置指南](#首启配置向导说明) | [安全与隐私声明](#安全与隐私承诺) | [问卷与反馈](#用户反馈与社区交流)
@@ -54,7 +62,7 @@ WeBrain 安全辅助方案：
 ### ✨ 核心特性
 
 - 🛡️ **绝对的零封号风险（Zero-Ban Risk）**：
-  不注入内存、不逆向协议、不接管微信号，绝不自动代发消息。所有发送均由用户手动完成，对微信服务端而言即是纯正的真人打字。
+  不注入内存、不逆向协议、不接管微信号。工具只通过 Windows 官方读屏（辅助视角）接口读取你指定会话里可见的文字。若你使用「发送到所选会话」功能，软件会在你点击确认后替你输入并点击微信的发送按钮 —— 发送必须由你在软件里显式确认触发，软件不会自行发送任何消息。
 - 💻 **免安装 & 极速轻量**：
   发布包解压后仅约 13.5MB，纯绿色便携式设计，解压即用，不写系统注册表，不写启动项。
 - 🔒 **纯本地回环运行（Local Loopback）**：
@@ -74,14 +82,14 @@ WeBrain 安全辅助方案：
 
 #### 步骤 1：下载解压
 从下方渠道下载最新的公测构建包：
-- **国内高速直链（推荐，免梯子）**：[蓝奏云下载](https://wwx.lanzoux.com/[TODO-JAMES 蓝奏云直链id]) (密码: `[TODO-JAMES 提取码]`) / [123云盘下载](https://www.123pan.cn/s/[TODO-JAMES 123云盘直链id])
+- **国内高速直链（推荐，免梯子）**：[蓝奏云下载](https://wwx.lanzoux.com/[id]) (密码: `[pwd]`) / [123云盘下载](https://www.123pan.cn/s/[id])
 - **GitHub Release 官方镜像**：[下载 WeBrain-Online-Beta-v3-wizard.zip](https://github.com/hongwangusa/webrain/releases/latest)
 
 解压 `WeBrain-Online-Beta-v3-wizard.zip` 到任意英文路径文件夹下（例如 `D:\Tools\WeBrain`）。
 
 #### 步骤 2：启动软件
-- **普通模式**：双击运行 `start.bat`（会保留控制台窗口，方便查看实时日志）。
-- **无窗口静默模式**：双击运行 `start.vbs`（后台静默运行，无黑窗闪烁）。
+- **普通模式**：双击运行 `启动微信大脑.bat`（会保留控制台窗口，方便查看实时日志）。
+- **无窗口静默模式**：双击运行 `启动微信大脑.vbs`（后台静默运行，无黑窗闪烁）。
 - 启动后浏览器将自动打开本地交互界面：`http://127.0.0.1:18980`。
 
 #### 步骤 3：首启向导（Wizard）
@@ -114,14 +122,14 @@ WeBrain 安全辅助方案：
 4. **包体哈希校验**：
    - 官方构建文件：`WeBrain-Online-Beta-v3-wizard.zip`
    - 文件大小：13,505,821 字节 (~13.5MB)
-   - SHA-256 校验和：`7D5A3E3197FF5BA537A55C09F257912E8B9DE1B1A5ECFE4F64D7FE4C4E2D669A`
+   - SHA-256 校验和：`7D5A3E31318BD7EA2B41FD637AE7B4A6D5F2F33667163541DF829E6BDAC669A`
 
 ---
 
 ### ❓ 常见问题排查（FAQ）
 
 #### Q1: 提示端口冲突或者打开网页报错 18980 无法访问？
-A: 检查是否有其他进程占用了 18980 端口。可在命令行执行 `netstat -ano | findstr 18980` 查看占用进程；或改用 `start.vbs` 启动备用端口 18981。
+A: 检查是否有其他进程占用了 18980 端口。可在命令行执行 `netstat -ano | findstr 18980` 查看占用进程；或改用 `启动微信大脑.vbs` 启动（该启动器固定绑定 18981）。
 
 #### Q2: Windows Defender / SmartScreen 提示"未知发布者"拦截？
 A: 由于公测版发布包尚未购买昂贵的企业 EV 签名证书，Windows 会默认弹出风险提示。点击【更多信息】 -> 【仍要运行】即可。如心存顾虑，欢迎使用解压工具查看包内源码结构或自行在隔离环境中测试。
@@ -141,7 +149,7 @@ A: 这是 WeBrain 的底线设计。自动发送需要调用 Windows UI 模拟�
 
 **WeBrain** is a non-invasive, ultra-lightweight Windows desktop assistant designed to help professionals and everyday users compose polished, considerate, and context-aware replies for WeChat and other messaging workflows.
 
-Instead of adopting risky reverse-engineered protocols or hooking into native messaging processes, **WeBrain acts strictly as an external, secure scratchpad**. You provide your rough thought, WeBrain prompts modern LLMs to craft multiple well-worded drafts (polite, direct, humorous, corporate), and you choose, inspect, copy, and send manually.
+Instead of adopting risky reverse-engineered protocols or hooking into native messaging processes, **WeBrain reads only what is already on your screen, through the official Windows accessibility (screen-reader) interface**. It injects nothing into memory, reverses no protocol and never takes over your WeChat account. The optional send action types and sends for you, but only after you confirm it inside the app - it never sends on its own.
 
 ### 🌟 Key Highlights
 - **100% Ban-Free**: Zero process injection, zero protocol reverse-engineering, zero automated message transmission.
@@ -152,7 +160,7 @@ Instead of adopting risky reverse-engineered protocols or hooking into native me
 ### 📦 Quick Start
 1. Download `WeBrain-Online-Beta-v3-wizard.zip` from [Releases](https://github.com/hongwangusa/webrain/releases).
 2. Extract to any local directory.
-3. Launch `start.bat` (console mode) or `start.vbs` (silent background mode).
+3. Launch `启动微信大脑.bat` (console mode) or `启动微信大脑.vbs` (silent background mode).
 4. The first-launch wizard will open automatically at `http://127.0.0.1:18980`. Set up your LLM provider in 30 seconds and start drafting!
 
 ---
