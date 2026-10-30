@@ -74,7 +74,7 @@ WeBrain 安全辅助方案：
 
 #### 步骤 1：下载解压
 从下方渠道下载最新的公测构建包：
-- **国内高速直链（推荐，免梯子）**：[蓝奏云下载](https://wwx.lanzoux.com/[TODO-LANZOU-ID]) (密码: `[TODO-LANZOU-PWD]`) / [123云盘下载](https://www.123pan.cn/s/[TODO-123PAN-ID])
+- **国内高速直链（推荐，免梯子）**：[蓝奏云下载](https://wwx.lanzoux.com/[TODO-JAMES 蓝奏云直链id]) (密码: `[TODO-JAMES 提取码]`) / [123云盘下载](https://www.123pan.cn/s/[TODO-JAMES 123云盘直链id])
 - **GitHub Release 官方镜像**：[下载 WeBrain-Online-Beta-v3-wizard.zip](https://github.com/hongwangusa/webrain/releases/latest)
 
 解压 `WeBrain-Online-Beta-v3-wizard.zip` 到任意英文路径文件夹下（例如 `D:\Tools\WeBrain`）。
@@ -160,7 +160,7 @@ Instead of adopting risky reverse-engineered protocols or hooking into native me
 ## 用户反馈与社区交流
 
 WeBrain 仍处于积极迭代的 Public Beta 公测阶段，我们非常渴望倾听真实用户的实际体验！
-- 📝 **公测体验问卷（1 分钟）**：[填写腾讯问卷反馈](https://wj.qq.com/s2/[TODO-SURVEY-ID]/)
+- 📝 **公测体验问卷（1 分钟）**：[填写腾讯问卷反馈](https://wj.qq.com/s2/[TODO-JAMES survey_id]/)
 - 🐛 **提交 Bug 或需求**：欢迎提交 [GitHub Issues](https://github.com/hongwangusa/webrain/issues)
 - 💬 **反馈快捷键**：在软件界面右上角点击【帮助与反馈】，可一键生成当前环境配置信息，方便快速排障。
 
